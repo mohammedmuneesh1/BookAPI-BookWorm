@@ -1,0 +1,31 @@
+
+.b-box {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: yellowgreen;
+}
+
+.b-box h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+.b-box p {
+  font-family: sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+.b-box1 {
+  order: 1;
+  /* background: red; */
+  width: 50%;
+  height: auto;
+}
+.b-box-img {
+  order: 2;
+  width: 550px;
+  height: 300px;
+}
