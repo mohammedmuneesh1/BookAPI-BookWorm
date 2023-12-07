@@ -4,13 +4,13 @@ import books from '../Assest/books.png';
 import '../Body/Body.css'
 export const Banner = () => {
   return (
-    <div className=' w-screen flex-grow  z-[-2]' style={{
-      background: `url(${bg1})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      backgroundPosition:"center",
-      
-    }}>
+    
+<div className='w-screen min-h-[84vh] sm:pt-20 pt-0 z-[-2]' style={{
+  background: `url(${bg1})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+}}>
       
       <div className='b-box'>
         <div className='b-box1'>

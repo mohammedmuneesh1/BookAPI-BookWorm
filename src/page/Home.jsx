@@ -9,12 +9,9 @@ export const Home = () => {
   return (
     <>
         <Contact />
-        <Navbar />
-        <div className=' h-screen flex flex-col'>
-          
+        <Navbar /> 
         <Banner />
       <Featured/>
-        </div>
 
     </>
   );
