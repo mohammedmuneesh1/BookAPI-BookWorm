@@ -4,6 +4,7 @@ import { Contact } from '../Components/Header/Contact';
 import { Navbar } from '../Components/Header/Navbar';
 import { Banner } from '../Components/Body/Banner';
 import { Featured } from '../Components/Body/Feature';
+import { Popular } from '../Components/Body/Popular';
 
 export const Home = () => {
   return (
@@ -12,6 +13,7 @@ export const Home = () => {
         <Navbar /> 
         <Banner />
       <Featured/>
+      <Popular/>
 
     </>
   );
