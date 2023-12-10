@@ -1,12 +1,6 @@
-<div class="p-8 max-w-lg border border-indigo-300 rounded-2xl hover:shadow-xl hover:shadow-indigo-50 flex flex-col items-center"
-    href="#">
-    <img src="https://loremflickr.com/800/600/girl" class="shadow rounded-lg overflow-hidden border" >
-    <div class="mt-8">
-        <h4 class="font-bold text-xl">Exercises</h4>
-        <p class="mt-2 text-gray-600">Create Exercises for any subject with the topics you and your students care about.
-        </p>
-        <div class="mt-5">
-            <button type="button" class="inline-flex items-center rounded-md border border-transparent bg-gray-800 px-3 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-gray-900">Start Creating</button>
+       <div className=' w-[150px]    md:mb-10 mb-3 flex flex-nowrap justify-around sm:text-3xl text-lg mx-auto text-white'>
+        <FaFacebookF  className='text-blue-500 hover:text-blue-700  hover:scale-110  duration-300'/>
+        <FaInstagram  className='text-pink-500 hover:text-pink-700  hover:scale-110  duration-300' />
+        <FaTwitter className='text text-blue-400 hover:text-blue-600 hover:scale-110  duration-300' />
         </div>
-    </div>
-</div>
+        {/* py-12 lg:py-16 */}
