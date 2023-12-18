@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import bg1 from '../Assest/bg3.png';
 import books from '../Assest/books.png';
 import '../Body/Body.css'
-export const Banner = () => {
+import axios from 'axios';
+export const Banner = ({onSearch,onsearchData}) => {
+  const [search , setSearch] = useState("");
+  const [bookData,setBookData] = useState([]);
+
+  const searchBox = async (e)=>{
+    try{
+      const response = await axios.get('https://www.googleapis.com/books/v1/volumes?q= '+search+'&key=AIzaSyDuyHVD9EVImhlLo3p3r1QWhsLmnv3tO78')
+      if(response.status===200){
+        onsearchData(response.data.items)
+        setSearch("");
+      }
+    }
+    catch(error){
+      console.log(error)
+    }
+  
+  }
   return (
     
 <div className='w-screen min-h-[84vh] sm:pt-20 pt-0 z-[-2]' style={{
@@ -26,8 +43,10 @@ export const Banner = () => {
               id="search-bar"
               placeholder="your keyword here"
               className="px-6 py-2 w-full rounded-md flex-1 outline-none bg-white"
+              value={search}
+              onChange={(e)=>setSearch(e.target.value)}
             />
-            <button className="w-full md:w-auto px-6 py-3 bg-black border-black text-white fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-xl transition-all disabled:opacity-70">
+            <button     onClick={(e) => searchBox(e)}   className="w-full md:w-auto px-6 py-3 bg-black border-black text-white fill-white active:scale-95 duration-100 border will-change-transform overflow-hidden relative rounded-xl transition-all disabled:opacity-70">
               <div className="relative">
                 {/* Loading animation change opacity to display */}
                 <div className="flex items-center justify-center h-3 w-3 absolute inset-1/2 -translate-x-1/2 -translate-y-1/2 transition-all">
