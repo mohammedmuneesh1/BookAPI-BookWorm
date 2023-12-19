@@ -12,24 +12,25 @@ export const Banner = ({onSearch,onsearchData}) => {
       const response = await axios.get('https://www.googleapis.com/books/v1/volumes?q= '+search+'&key=AIzaSyDuyHVD9EVImhlLo3p3r1QWhsLmnv3tO78')
       if(response.status===200){
         onsearchData(response.data.items)
-        setSearch("");
+        onSearch(true);
+        setSearch("")
       }
     }
     catch(error){
       console.log(error)
     }
-  
   }
+  
   return (
     
-<div className='w-screen min-h-[84vh] sm:pt-20 pt-0 z-[-2]' style={{
+<div className='w-screen min-h-[84vh] sm:pt-20 pt-0 ' style={{
   background: `url(${bg1})`,
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
 }}>
       
-      <div className='b-box'>
+      <div className='b-box z-[-9]' >
         <div className='b-box1'>
         <h1>Expand Knowledge By Reading Book</h1>
         <p>Reading is the process of taking in the sense of letters, symbols, etc, especially by sight or touch. Discover the University of for education and researchers.</p>

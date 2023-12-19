@@ -22,7 +22,6 @@ export const Home = () => {
     setSearchData(data)
   }
 
-  console.log(searchData)
 
   return (
     <>

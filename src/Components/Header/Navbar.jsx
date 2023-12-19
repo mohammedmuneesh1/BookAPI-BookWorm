@@ -35,7 +35,7 @@ export  function Navbar() {
   ];
   return (
     <>
-      <div className="shadow-md w-screen sticky top-0 left-0 ">
+      <div className="shadow-md w-screen sticky top-0 left-0 z-[1]">
         <div className="flex bg-white md:py-6 py-4 items-center justify-between md:px-5 px-3 font-serif font-semibold  tracking-wide ">
           <div className=" cursor-pointer">
             <img src={bookworm}  className=" sm:w-40 sm:h-15  w-30 h-8"/>
