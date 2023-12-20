@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import bg1 from '../Assest/bg3.png';
 import books from '../Assest/books.png';
-import '../Body/Body.css'
+
 import axios from 'axios';
 export const Banner = ({onSearch,onsearchData}) => {
   const [search , setSearch] = useState("");
@@ -9,7 +9,7 @@ export const Banner = ({onSearch,onsearchData}) => {
 
   const searchBox = async (e)=>{
     try{
-      const response = await axios.get('https://www.googleapis.com/books/v1/volumes?q= '+search+'&key=AIzaSyDuyHVD9EVImhlLo3p3r1QWhsLmnv3tO78')
+      const response = await axios.get('https://www.googleapis.com/books/v1/volumes?q= '+search+'&key=AIzaSyDuyHVD9EVImhlLo3p3r1QWhsLmnv3tO78'+'&maxResults=40')
       if(response.status===200){
         onsearchData(response.data.items)
         onSearch(true);

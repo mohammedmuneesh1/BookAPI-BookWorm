@@ -8,6 +8,10 @@ import { Popular } from '../Components/Body/Popular'
 import { Subscribe } from '../Components/Footer/Subscribe'
 import { Footer } from '../Components/Footer/Footer'
 import { SearchResult } from '../Components/Body/searchResult'
+import '../Components/Body/body.css'
+import { Trail } from '../Components/Footer/Trail'
+import { Modal } from '../Components/Body/modal'
+
 // import { Trail } from '../Components/Footer/Trail';
 
 export const Home = () => {
@@ -28,11 +32,13 @@ export const Home = () => {
       <Contact />
       <Navbar />
       <Banner onSearch = {handleSearchResult} onsearchData={fnSearchData} />
+
       {showSearchComponent?<SearchResult data = {searchData} />:null}
       <Featured />
       <Popular />
       <Subscribe />
       <Footer />
+      {/* <Modal/> */}
     </>
   )
 }
