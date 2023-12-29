@@ -39,7 +39,7 @@ export const SearchResult = ({ data }) => {
         Search Result
       </h1>
 
-      <div className={`flex flex-wrap  lg:justify-start justify-around  max-w-[100%] mx-auto mb-5`}>
+      <div className={`flex flex-wrap  lg:justify-start justify-between  max-w-[100%] mx-auto mb-5`}>
         {showResults
           ? data?.map((value, index) => {
               let imgSrc =
